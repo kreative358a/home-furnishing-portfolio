@@ -10,16 +10,8 @@ export const customFetchStrapi = axios.create({
 });
 
 
-const productionUrlHF = " https://ikea-api.p.rapidapi.com";
-export const customFetchHF = axios.create({
-  baseURL: productionUrlHF,
+const productionUrlHF = " ...";
 
-  headers: {
-    // "x-rapidapi-key": "765521f256mshc2545f8ffb3774cp1cde5ajsnc0b3ad22f4b6",
-    "x-rapidapi-key": `${import.meta.env.VITE_API_KEY}`,
-    "x-rapidapi-host": "ikea-api.p.rapidapi.com",
-  },
-});
 
 export const formatPrice = (price) => {
   const dollarsAmount = new Intl.NumberFormat("en-US", {
